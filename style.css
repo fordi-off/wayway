@@ -1,11 +1,47 @@
 body {
-  font-family: Arial, sans-serif;
-  padding: 2rem;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  text-align: center;
+  margin: 0px;
 }
-.language-switcher {
-  margin-bottom: 1rem;
+
+.header {
+  background: #000000;
+  display: flex;
+  height: 60px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
 }
-button {
-  margin-right: 1rem;
-  padding: 0.5rem 1rem;
+
+.header h1{
+  text-align: center;
+  color: white;
+  margin: auto;
+  transition: all ease-out 0.3s;
+  font-size: 200%;
+  letter-spacing: 0px;
+}
+
+header h1:hover{
+  font-size: 225%;
+  letter-spacing: 3px;
+}
+
+
+.custom_link {
+  text-decoration: none;
+}
+
+.footer{
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  align-items: center;
+  justify-content: center;
+  background-color: #000000;
+}
+
+.footer p{
+  color: white;
 }
