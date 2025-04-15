@@ -5,20 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title data-i18n="pageTitle">Way</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flag-icons@7/css/flag-icons.min.css">
 </head>
 <body>
 
     <header class="header">
         <h1>WAY</h1>
+        <div class="language-selector">
+          <span class="fi fi-gb" data-lang="en"></span>
+          <span class="fi fi-no" data-lang="no"></span>
+        </div>
     </header>
-
-  <section>
-    <h2 data-i18n="aboutTitle"></h2>
-    <p data-i18n="aboutText"></p>
-  </section>
+    
+    <div class="org-selector">
+      <img src="content/images/org_1.jpg" id="left">
+      <img src="content/images/org_2.png" id="middle">
+      <img src="content/images/org_3.jpg" id="right">
+    </div>
+    
 
   <footer class="footer">
-    <p data-i18n="footer">Lol</p>
+    <p>&copy; Way.no</p>
   </footer>
 
   <script src="script.js"></script>

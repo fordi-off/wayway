@@ -31,3 +31,17 @@ function applyTranslations(data, lang) {
 
 // Default language
 setLanguage("en");
+
+const flags = document.querySelectorAll('.language-selector .fi');
+
+flags.forEach(flag => {
+  flag.addEventListener('click', () => {
+    const selectedLang = flag.getAttribute('data-lang');
+    setLanguage(selectedLang);
+  });
+});
+
+function changeLanguage(lang) {
+  console.log(`Switching to language: ${lang}`);
+  // your language switch logic goes here (e.g. loading from JSON)
+}

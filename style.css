@@ -2,21 +2,22 @@ body {
   font-family: Georgia, 'Times New Roman', Times, serif;
   text-align: center;
   margin: 0px;
+  background-color: #DDDDDD;
 }
 
 .header {
-  background: #000000;
+  background: #FF8C32;
   display: flex;
   height: 60px;
   width: 100%;
-  position: fixed;
+  align-items: center;
   top: 0;
   left: 0;
 }
 
 .header h1{
   text-align: center;
-  color: white;
+  color: #06113C;
   margin: auto;
   transition: all ease-out 0.3s;
   font-size: 200%;
@@ -39,9 +40,72 @@ header h1:hover{
   bottom: 0;
   align-items: center;
   justify-content: center;
-  background-color: #000000;
+  background-color: #FF8C32;
+  display: flex;
 }
 
 .footer p{
-  color: white;
+  color: #06113C;
+  font-weight: 600;
+}
+
+.language-selector{
+  position: fixed;
+  right: 0;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.language-selector .fi{
+  text-align: center;
+  font-size: 125%;
+  transition: all ease-in 0.1s;
+}
+
+.language-selector .fi:hover{
+  scale: 1.1;
+  cursor: pointer;
+}
+
+.org-selector{
+  display: flex;
+  position: fixed;
+  flex-direction: column;
+}
+
+.org-selector img{
+  position: fixed;
+  width: 100%;;
+}
+
+#left {
+  z-index: 0;
+  left: -67%;
+  transition: all ease-in 0.8s;
+}
+#left:hover{
+  z-index: 50;
+  transform: translateX(67%);
+}
+
+#middle {
+  clip-path: inset(0% 33% 0% 33%);
+  z-index: 1;
+  transition: clip-path ease-in 0.8s
+}
+#middle:hover{
+  clip-path: inset(0% 0% 0% 0%);
+}
+
+#right {
+  right: -67%;
+  z-index: 0;
+  transition: all ease-in 0.8s;
+}
+#right:hover{
+  z-index: 50;
+  transform: translateX(-67%);
 }
