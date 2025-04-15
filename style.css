@@ -1,0 +1,11 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 2rem;
+}
+.language-switcher {
+  margin-bottom: 1rem;
+}
+button {
+  margin-right: 1rem;
+  padding: 0.5rem 1rem;
+}
