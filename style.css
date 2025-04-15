@@ -78,34 +78,25 @@ header h1:hover{
 
 .org-selector img{
   position: fixed;
-  width: 100%;;
+  width: 100%;
+  transition: filter 0.8s ease, transform 0.8s ease, z-index 0s, clip-path 0.8s ease;
 }
 
 #left {
-  z-index: 0;
+  z-index: 1;
   left: -67%;
-  transition: all ease-in 0.8s;
-}
-#left:hover{
-  z-index: 50;
-  transform: translateX(67%);
 }
 
 #middle {
   clip-path: inset(0% 33% 0% 33%);
   z-index: 1;
-  transition: clip-path ease-in 0.8s
-}
-#middle:hover{
-  clip-path: inset(0% 0% 0% 0%);
 }
 
 #right {
   right: -67%;
-  z-index: 0;
-  transition: all ease-in 0.8s;
+  z-index: 1;
 }
-#right:hover{
-  z-index: 50;
-  transform: translateX(-67%);
+
+.moving-out {
+  filter: brightness(40%) grayscale(80%);
 }
