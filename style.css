@@ -7,12 +7,14 @@ body {
 
 .header {
   background: #FF8C32;
+  position: relative;
   display: flex;
   height: 60px;
   width: 100%;
   align-items: center;
   top: 0;
   left: 0;
+  z-index: 3;
 }
 
 .header h1{
@@ -73,13 +75,23 @@ header h1:hover{
 .org-selector{
   display: flex;
   position: fixed;
+  height: 50vh;
   flex-direction: column;
 }
 
-.org-selector img{
+.org-container img{
   position: fixed;
-  width: 100%;
+  width: 100vw;
   transition: filter 0.8s ease, transform 0.8s ease, z-index 0s, clip-path 0.8s ease;
+}
+
+.overlay-text{
+  position: absolute;
+  z-index: 2;
+  font-size: 2vw;
+  color: white;
+  opacity: 0%;
+  transition: all ease 0.8s;
 }
 
 #left {
@@ -87,14 +99,40 @@ header h1:hover{
   left: -67%;
 }
 
+#left-text {
+  left: -67vw;
+  width: 67vw;
+  text-align: left;
+}
+
 #middle {
   clip-path: inset(0% 33% 0% 33%);
   z-index: 1;
 }
 
+#middle-right-text {
+  opacity: 100%;
+  right: -132vw;
+  width: 33vw;
+  text-align: right;
+}
+
+#middle-left-text {
+  opacity: 100%;
+  left: -33vw;
+  width: 32vw;
+  text-align: left;
+}
+
 #right {
   right: -67%;
   z-index: 1;
+}
+
+#right-text {
+  left: 100vw;
+  width: 67vw;
+  text-align: right;
 }
 
 .moving-out {
