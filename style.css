@@ -6,11 +6,12 @@ body {
   overflow-x: hidden;
 }
 
+
 .header {
   background: #212529;
   position: relative;
   display: flex;
-  justify-content: left;
+  justify-content: center;
   height: 8vh;
   width: 100vw;
   align-items:center;
@@ -21,10 +22,9 @@ body {
 
 .header a {
   text-align: center;
-  padding-left: 2vw;
   color: #adb5bd;
   transition: all ease-out 0.3s;
-  font-size: clamp(1.5rem, 4vw, 3.5rem); 
+  font-size: clamp(1.6rem, 4vw, 2.5rem); 
   letter-spacing: 0px;
   text-shadow: 3px 3px 5px black;
   cursor: pointer;
@@ -32,22 +32,8 @@ body {
 }
 
 .header a:hover {
-  font-size: clamp(1.8rem, 5vw, 4.5rem); 
+  font-size: clamp(1.8rem, 5vw, 3.0rem); 
   letter-spacing: clamp(0px, 0.1vw, 1px);
-}
-
-.header h2 a {
-  color: #ced4da;
-  font-size: clamp(1rem, 2.5vw, 2.5rem);
-  padding: 2vw;
-  cursor: pointer;
-  transition: all ease-out 0.3s;
-  text-shadow: 3px 3px 5px black;
-}
-
-.header h2 a:hover {
-  font-size: clamp(1.2rem, 3.5vw, 3.5rem); 
-  letter-spacing: clamp(0px, 0.2vw, 2px);
 }
 
 
@@ -68,7 +54,7 @@ body {
 
 .language-selector{
   position: absolute;
-  right: 20px;
+  right: 3vw;
   align-items: center;
   justify-content: center;
   display: flex;
@@ -87,22 +73,51 @@ body {
   transform: translateX(-0.5vw);
   cursor: pointer;
 }
-
 .org-image{
-  position: relative;
+  display: flex;
 }
-
 .org-image img{
+  position: relative;
   display: block;
   width: 100vw;
+  transition: all ease 0.8s;
 }
+
+#org-image1{
+  clip-path: inset(0 75vw 0 0);
+  z-index: 1;
+  margin-right: -75vw;
+}
+#org-image2{
+  clip-path: inset(0 50vw 0 25vw);
+  z-index: 1;
+  margin-left: -25vw;
+  margin-right: -50vw;
+}
+#org-image3{
+  clip-path: inset(0 25vw 0 50vw);
+  z-index: 1;
+  margin-left: -50vw;
+  margin-right: -25vw;
+}
+#org-image4{
+  clip-path: inset(0 0 0 75vw);
+  margin-left: -75vw;
+  z-index: 1;
+}
+
 
 .text-overlay{
   position: absolute;
   text-align: center;
-  bottom: 10%;
-  color: white;
+  bottom: 2%;
+  color: #dee2e6;
   font-size: 1rem;
   width: 100%;
 }
 
+.org-options{
+  width: 100%;
+  background-color: #adb5bd;
+  height: 3vh;
+}
