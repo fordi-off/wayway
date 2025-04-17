@@ -43,6 +43,52 @@ flags.forEach(flag => {
   });
 });
 
+let feedbacks = [];
+
+function loadFeedbacks() {
+  fetch('/content/data/feedbacks.json')
+    .then(response => response.json())
+    .then(data => {
+      feedbacks = data;
+      showNextFeedback(); // First one immediately
+
+      // Then every 15 seconds
+      setInterval(showNextFeedback, 15000);
+    })
+    .catch(error => console.error('Error loading feedbacks:', error));
+}
+
+let currentIndex = 0;
+
+function showNextFeedback() {
+  if (feedbacks.length === 0) return;
+
+  const [name, feedbackText] = feedbacks[currentIndex];
+
+  const feedbackTextEl = document.getElementById('feedback-text');
+  const feedbackNameEl = document.getElementById('feedback-name');
+
+  feedbackTextEl.textContent = `"${feedbackText}"`;
+  feedbackNameEl.textContent = `— ${name}`;
+
+  currentIndex = (currentIndex + 1) % feedbacks.length;
+
+  // Show feedback
+  feedbackTextEl.style.opacity = "1";
+  feedbackNameEl.style.opacity = "1";
+
+  // Hide it after 13 seconds
+  setTimeout(() => {
+    feedbackTextEl.style.opacity = "0";
+    feedbackNameEl.style.opacity = "0";
+  }, 13000);
+}
+
+loadFeedbacks();
+
+const feedbackTextEl = document.getElementById('feedback-text');
+const feedbackNameEl = document.getElementById('feedback-name');
+
 const org_image1 = document.getElementById("org-image1");
 const org_image2 = document.getElementById("org-image2");
 const org_image3 = document.getElementById("org-image3");
