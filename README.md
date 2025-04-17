@@ -29,3 +29,15 @@ This is a simple and scalable multilingual website built with HTML, CSS, and Jav
 ├── 📜 script.js (4.9 KB)
 └── 🎨 style.css (2.5 KB)
 ```
+
+## 📃 License
+
+MIT — do whatever you want with it 🙌
+
+---
+
+## 📦 Dependencies
+
+- [js-yaml via Skypack CDN](https://cdn.skypack.dev/js-yaml) for parsing `.yaml`
+
+---
