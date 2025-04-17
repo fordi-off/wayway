@@ -20,17 +20,12 @@ This is a simple and scalable multilingual website built with HTML, CSS, and Jav
 │       ├── 🖼️ org_3.jpg (394.7 KB)
 │       └── 🖼️ org_4.jpg (256.4 KB)
 ├── 📁 lang
-│   ├── 🧾 en.json (28 B)
-│   └── 🧾 no.json (29 B)
+│   ├── 📄 en.yaml (1.7 KB)
+│   └── 📄 no.yaml (1.7 KB)
 ├── 🐍 generate_tree.py (2.1 KB)
-├── 🌐 index.html (1.5 KB)
+├── 🌐 index.html (1.9 KB)
 ├── 📄 pallete.txt (45 B)
 ├── 📝 README.md (0.9 KB)
-├── 📜 script.js (3.6 KB)
-└── 🎨 style.css (2.1 KB)
+├── 📜 script.js (4.9 KB)
+└── 🎨 style.css (2.5 KB)
 ```
-
-
-
-
-
