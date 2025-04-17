@@ -1,12 +1,15 @@
+import jsyaml from 'https://cdn.skypack.dev/js-yaml';
+
 let translations = {};
 
 function setLanguage(lang) {
   if (translations[lang]) {
     applyTranslations(translations[lang], lang);
   } else {
-    fetch(`lang/${lang}.json`)
-      .then(res => res.json())
-      .then(data => {
+    fetch(`lang/${lang}.yaml`)
+      .then(res => res.text())
+      .then(yamlText => {
+        const data = jsyaml.load(yamlText);
         translations[lang] = data;
         applyTranslations(data, lang);
       })
@@ -56,6 +59,7 @@ org_image1.addEventListener("mouseenter", () => {
   org_image2.style.transform = "translateX(75vw)";
   org_image3.style.transform = "translateX(75vw)";
   org_image4.style.transform = "translateX(75vw)";
+  text_left.style.clipPath = "inset(0 0 0 0)"
   text_left.style.opacity = "100";
   org_image1.onclick = () => {
     window.location.href = "_blank"
@@ -67,6 +71,7 @@ org_image1.addEventListener("mouseleave", () => {
   org_image2.style.transform = "translateX(0)"
   org_image3.style.transform = "translateX(0)"
   org_image4.style.transform = "translateX(0)"
+  text_left.style.clipPath = "inset(0 75vw 0 0)"
   text_left.style.opacity = "0";
 })
 
@@ -76,6 +81,7 @@ org_image2.addEventListener("mouseenter", () => {
   org_image1.style.transform = "translateX(-25vw)"
   org_image3.style.transform = "translateX(50vw)"
   org_image4.style.transform = "translateX(50vw)"
+  text_leftish.style.clipPath = "inset(0 0 0 0)"
   text_leftish.style.opacity = "100";
   org_image2.onclick = () => {
     window.location.href = "_blank"
@@ -87,6 +93,7 @@ org_image2.addEventListener("mouseleave", () => {
   org_image1.style.transform = "translateX(0)"
   org_image3.style.transform = "translateX(0)"
   org_image4.style.transform = "translateX(0)"
+  text_leftish.style.clipPath = "inset(0 66vw 0 0)"
   text_leftish.style.opacity = "0";
 })
 
@@ -96,6 +103,7 @@ org_image3.addEventListener("mouseenter", () => {
   org_image2.style.transform = "translateX(-50vw)"
   org_image1.style.transform = "translateX(-50vw)"
   org_image4.style.transform = "translateX(25vw)"
+  text_rightish.style.clipPath = "inset(0 0 0 0)"
   text_rightish.style.opacity = "100";
   org_image3.onclick = () => {
     window.location.href = "_blank"
@@ -107,6 +115,7 @@ org_image3.addEventListener("mouseleave", () => {
   org_image2.style.transform = "translateX(0)"
   org_image1.style.transform = "translateX(0)"
   org_image4.style.transform = "translateX(0)"
+  text_rightish.style.clipPath = "inset(0 0 0 66vw)"
   text_rightish.style.opacity = "0";
 })
 
@@ -116,6 +125,7 @@ org_image4.addEventListener("mouseenter", () => {
   org_image2.style.transform = "translateX(-75vw)"
   org_image3.style.transform = "translateX(-75vw)"
   org_image1.style.transform = "translateX(-75vw)"
+  text_right.style.clipPath = "inset(0 0 0 0)"
   text_right.style.opacity = "100";
   org_image4.onclick = () => {
     window.location.href = "_blank"
@@ -127,5 +137,6 @@ org_image4.addEventListener("mouseleave", () => {
   org_image2.style.transform = "translateX(0)"
   org_image3.style.transform = "translateX(0)"
   org_image1.style.transform = "translateX(0)"
+  text_right.style.clipPath = "inset(0 0 0 75vw)"
   text_right.style.opacity = "0";
 })
