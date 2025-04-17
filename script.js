@@ -32,7 +32,7 @@ function applyTranslations(data, lang) {
   document.documentElement.lang = lang;
 }
 
-setLanguage("en");
+setLanguage("no");
 
 const flags = document.querySelectorAll('.language-selector .fi');
 
