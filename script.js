@@ -86,8 +86,22 @@ function showNextFeedback() {
 
 loadFeedbacks();
 
-const feedbackTextEl = document.getElementById('feedback-text');
-const feedbackNameEl = document.getElementById('feedback-name');
+const images = document.querySelectorAll('.other-org-section .org img');
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    } else {
+      entry.target.classList.remove('visible'); // Optional: remove when out of view
+    }
+  });
+}, {
+  threshold: 0.8 // Adjust this value depending on how visible you want it to be before triggering
+});
+
+images.forEach(img => observer.observe(img));
+
 
 const org_image1 = document.getElementById("org-image1");
 const org_image2 = document.getElementById("org-image2");
