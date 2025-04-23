@@ -9,7 +9,6 @@ This is a simple and scalable multilingual website built with HTML, CSS, and Jav
 - Language switcher (EN / NO)
 - Uses `data-i18n` attributes for easy translation handling
 - No libraries or frameworks required
-
 ## 📁 Project Structure
 
 ```
@@ -24,14 +23,16 @@ This is a simple and scalable multilingual website built with HTML, CSS, and Jav
 │       ├── 🖼️ org_3.jpg (394.7 KB)
 │       └── 🖼️ org_4.jpg (256.4 KB)
 ├── 📁 lang
-│   ├── 📕 en.yaml (1.7 KB)
+│   ├── 📕 en.yaml (0 B)
 │   └── 📕 no.yaml (1.7 KB)
+├── 📁 ungway
+│   └── 🌐 index.html (2.4 KB)
 ├── 🐍 generate_tree.py (2.1 KB)
-├── 🌐 index.html (2.1 KB)
+├── 🌐 index.html (2.6 KB)
 ├── 📄 pallete.txt (45 B)
-├── 📝 README.md (1.1 KB)
+├── 📝 README.md (1.3 KB)
 ├── 📜 script.js (6.3 KB)
-└── 🎨 style.css (4.2 KB)
+└── 🎨 style.css (6.6 KB)
 ```
 
 ## 📃 License

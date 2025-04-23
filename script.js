@@ -86,7 +86,7 @@ function showNextFeedback() {
 
 loadFeedbacks();
 
-const images = document.querySelectorAll('.other-org-section .org img');
+const images = document.querySelectorAll('.our-friends .org img');
 
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
@@ -126,7 +126,6 @@ function resetImages() {
   allImages.forEach(({ img, text, clip }) => {
     img.style.clipPath = clip;
     img.style.filter = "brightness(1)";
-    img.style.transform = "translateX(0)";
     text.style.opacity = "0";
   });
 
@@ -143,9 +142,9 @@ function activateImage1() {
   text_left.style.clipPath = "inset(0 0 0 0)";
   text_left.style.opacity = "1";
 
-  org_image2.style.transform = "translateX(75vw)";
-  org_image3.style.transform = "translateX(50vw)";
-  org_image4.style.transform = "translateX(25vw)";
+  org_image2.style.clipPath = "inset(0 0 0 100vw)";
+  org_image3.style.clipPath = "inset(0 0 0 100vw)";
+  org_image4.style.clipPath = "inset(0 0 0 100vw)";
 }
 
 function activateImage2() {
@@ -155,9 +154,9 @@ function activateImage2() {
   text_leftish.style.clipPath = "inset(0 0 0 0)";
   text_leftish.style.opacity = "1";
 
-  org_image1.style.transform = "translateX(-25vw)";
-  org_image3.style.transform = "translateX(50vw)";
-  org_image4.style.transform = "translateX(25vw)";
+  org_image1.style.clipPath = "inset(0 100vw 0 0)";
+  org_image3.style.clipPath = "inset(0 0 0 100vw)";
+  org_image4.style.clipPath = "inset(0 0 0 100vw)";
 }
 
 
@@ -168,9 +167,9 @@ function activateImage3() {
   text_rightish.style.clipPath = "inset(0 0 0 0)";
   text_rightish.style.opacity = "1";
 
-  org_image1.style.transform = "translateX(-25vw)";
-  org_image2.style.transform = "translateX(-50vw)";
-  org_image4.style.transform = "translateX(25vw)";
+  org_image2.style.clipPath = "inset(0 100vw 0 0)";
+  org_image1.style.clipPath = "inset(0 100vw 0 0)";
+  org_image4.style.clipPath = "inset(0 0 0 100vw)";
 }
 
 function activateImage4() {
@@ -180,9 +179,9 @@ function activateImage4() {
   text_right.style.clipPath = "inset(0 0 0 0)";
   text_right.style.opacity = "1";
 
-  org_image1.style.transform = "translateX(-25vw)";
-  org_image2.style.transform = "translateX(-50vw)";
-  org_image3.style.transform = "translateX(-75vw)";
+  org_image2.style.clipPath = "inset(0 100vw 0 0)";
+  org_image3.style.clipPath = "inset(0 100vw 0 0)";
+  org_image1.style.clipPath = "inset(0 100vw 0 0)";
 }
 
 // Mobile logic
