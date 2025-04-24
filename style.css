@@ -322,7 +322,7 @@ body {
 }
 .events h1{
   text-align: left;
-  font-weight: 400;
+  font-weight: 600;
   font-size: 4vh;
   margin-top: 1%;
   margin-bottom: 1%;
@@ -345,7 +345,6 @@ body {
   background-color: #ffffff;
   border: 2px solid #dee2e6;
   border-radius: 5px;
-  height: 12vh;
   justify-content: left;
   overflow: hidden;
 }
@@ -360,9 +359,23 @@ body {
 .event h3{
   margin: 0;
   margin-left: 1%;
+  margin-bottom: 2%;
   text-align: left;
   font-weight: 300;
   font-size: 2.5vh;
+}
+
+@media (max-width: 768px) {
+
+  .event-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .events .event {
+    width: 96%;
+    margin: 1% 0;
+  }
 }
 
 .milestones{
